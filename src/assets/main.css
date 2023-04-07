@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: 'Poppins';
+  src: url('../assets//fonts//Poppins-Regular.ttf');
+}
+@font-face {
+  font-family: 'Mc';
+  src: url('../assets//fonts//Minercraftory.ttf');
+}
+body {
+  overflow: hidden;
+  background-color: #e5e5e5;
+  font-family: 'Poppins';
+}
+h1,
+h3 {
+  font-family: 'Mc';
+}
