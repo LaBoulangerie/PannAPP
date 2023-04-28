@@ -7,7 +7,8 @@ export const useGlobal = defineStore('useGlobal', {
     items: null,
     category: 'town',
     loading: true,
-    searchQuery: null
+    searchQuery: null,
+    months: ['Gaiarkhè', 'Tempopidum', 'Quinésil', 'Éposendre']
   }),
 
   actions: {
@@ -46,6 +47,18 @@ export const useGlobal = defineStore('useGlobal', {
       this.loading = false
       this.category = this.items[0].type
       return this.items
+    },
+    getDate() {
+      const date = new Date()
+      let currentMonth = date.getMonth()
+      for (let i = 0; i < this.months.length; ) {
+        if (currentMonth % i == 0) {
+          currentMonth = this.months[i]
+          console.log(currentMonth)
+        }
+        i++
+      }
+      console.log(currentMonth)
     }
   }
 })

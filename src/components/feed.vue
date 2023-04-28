@@ -8,6 +8,7 @@ const global = useGlobal()
 onMounted(() => {
   if (global.items == null) {
     global.getCat()
+    global.getDate()
   }
 })
 </script>

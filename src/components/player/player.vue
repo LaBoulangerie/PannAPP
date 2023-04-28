@@ -7,6 +7,7 @@ import Skills from './skills.vue'
 const props = defineProps({
   data: Object
 })
+console.log(props)
 
 function scroll(component) {
   const element = document.querySelector('.' + component)
@@ -16,22 +17,9 @@ function scroll(component) {
 
 <template>
   <div class="overflow-y-scroll mt-24 md:mt-0 md:ml-4">
-    <PlayerTopPart
-      :name="props?.data[0]?.name"
-      :online="props?.data[0]?.isOnline"
-      @town="scroll('town')"
-      @nation="scroll('nation')"
-    />
-    <Skills :mmo="props?.data[0]?.mmo" :uuid="props?.data[0]?.uuid" />
-    <PlayerTown
-      v-if="props?.data[0]?.resident"
-      :town="props?.data[0]?.resident?.town"
-      class="town"
-    />
-    <PlayerNation
-      v-if="props?.data[0]?.resident?.nation"
-      :nation="props?.data[0]?.resident?.nation"
-      class="nation"
-    />
+    <PlayerTopPart :name="data[0]?.name" :online="data[0]?.isOnline" @town="scroll('town')" @nation="scroll('nation')" />
+    <Skills :mmo="data[0]?.mmo" :uuid="data[0]?.uuid" />
+    <PlayerTown v-if="props?.data[0]?.resident" :town="data[0]?.resident?.town" class="town" />
+    <PlayerNation v-if="props?.data[0]?.resident?.nation" :nation="data[0]?.resident?.nation" class="nation" />
   </div>
 </template>

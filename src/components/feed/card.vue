@@ -1,5 +1,5 @@
 <script setup>
-import { computed, ref } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 import nation from '../../assets/images/nation.png'
 import town from '../../assets/images/town.png'
 import { useRouter } from 'vue-router'
@@ -24,6 +24,9 @@ function changeRoute(nameString) {
     router.push({ name: 'card', params: { type: props.type, name: nameString } })
   }
 }
+onMounted(()=>{
+  
+})
 </script>
 
 <template>
