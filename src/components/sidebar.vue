@@ -30,7 +30,7 @@ function goToFeed() {
         <img class="w-12 ml-0 mr-8" :src="logo" @click="goToFeed" />
         <div class="overflow-x-scroll flex flex-row w-screen px-8">
           <li v-for="(category, index) in categories"
-            class="flex flex-col items-center p-8 text-base font-bold rounded-lg text-white w-32 mr-6 ml-4"
+            class="flex flex-col items-center p-8 text-base font-bold rounded-lg text-text w-32 mr-6 ml-4"
             @click="changeCategory(category.cat), (activeIndex = index)" :class="{ 'bg-orange': activeIndex === index }">
             <fas :icon="category.icon" size="2x" class="mb-2" />
             <p>{{ category.name }}</p>
@@ -41,14 +41,26 @@ function goToFeed() {
     <div class="h-full px-2 py-10 overflow-y-auto bg-cardBlue dark:bg-gray-800 md:flex hidden overflow-x-hidden">
       <ul class="space-y-2">
         <li v-for="(category, index) in categories" @click="changeCategory(category.cat), (activeIndex = index)"
-          class="flex flex-col items-center p-4 text-base font-bold rounded-lg text-white cursor-pointer"
+          class="flex flex-col items-center p-4 text-base font-bold rounded-lg text-text cursor-pointer"
           :class="{ 'bg-orange': activeIndex === index }">
           <fas :icon="category.icon" size="2x" class="mb-3" />
           <p>{{ category.name }}</p>
         </li>
       </ul>
-      <div class="flex absolute bottom-2  left-0 justify-center w-full">
-        <img class="w-16 cursor-pointer" :src="logo" @click="goToFeed" />
+      <div class="flex  flex-col absolute bottom-2 w-5/6 justify-center items-center">
+        <img class="w-16 cursor-pointer mb-2" :src="logo" @click="goToFeed" />
+        <div class="flex flex-row gap-3 mb-2 text-text">
+          <a href="https://github.com/LaBoulangerie">
+            <fas icon="fa-brands fa-github" size="2x" />
+          </a>
+          <a href="https://laboulangerie.net/">
+            <fas icon="fa-solid fa-globe" size="2x" />
+          </a>
+          <a href="https://laboulangerie.net/wiki">
+            <fas icon="fa-solid fa-book" size="2x" />
+          </a>
+        </div>
+
       </div>
 
     </div>

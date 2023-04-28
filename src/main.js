@@ -2,8 +2,17 @@ import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faFlag, faUser, faHouse, faUsers, faCoins } from '@fortawesome/free-solid-svg-icons'
-library.add(faHouse, faUser, faFlag, faUsers, faCoins)
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import {
+  faFlag,
+  faUser,
+  faHouse,
+  faUsers,
+  faCoins,
+  faBook,
+  faGlobe
+} from '@fortawesome/free-solid-svg-icons'
+library.add(faHouse, faUser, faFlag, faUsers, faCoins, faGithub, faBook, faGlobe)
 import App from './App.vue'
 import router from './router'
 

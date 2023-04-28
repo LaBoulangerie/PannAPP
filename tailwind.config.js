@@ -20,7 +20,8 @@ module.exports = {
         builder2: '#FFBB61',
         inter: '#007E51',
         inter2: '#01A7BD',
-        donors: '#9caae8'
+        donors: '#9caae8',
+        text: 'rgb(228 217 255 /0.8)'
       }
     }
   },
