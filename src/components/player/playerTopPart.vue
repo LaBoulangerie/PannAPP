@@ -3,7 +3,6 @@ const props = defineProps({
   name: String,
   online: Object
 })
-console.log(props)
 const emits = defineEmits(['town', 'nation'])
 </script>
 

@@ -7,7 +7,6 @@ import Skills from './skills.vue'
 const props = defineProps({
   data: Object
 })
-console.log(props)
 
 function scroll(component) {
   const element = document.querySelector('.' + component)
